@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <template id="admin_reviewreminder_config_general_email_template" label="Review Reminder Email Template"
+              file="reminder.html" type="html" module="Meetanshi_ReviewReminderBasic" area="frontend"/>
+</config>

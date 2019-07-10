@@ -1,0 +1,26 @@
+<!--@subject Review your Recent Purchase! {{trans "%store" store=$store}} @-->
+
+<!--@vars {
+"layout handle=\"review_reminder_template\" reminder=$reminder":"Review Reminder",
+"var reminder.increment_id":"Order Id"
+} @-->
+
+{{template config_path="design/email/header_template"}}
+<p>
+    <img width="600" src="{{view url='{{trans "%image" image=$image}}'}}" alt="Review Reminder"/>
+</p>
+<br>
+Dear {{trans "%customer" customer=$customer}},
+
+<p>Thank you for your recent purchase from {{trans "%store" store=$store}}.We are excited to count you as our valued customer.</p>
+<p>As you know, {{trans "%store" store=$store}} relies on people like you for Product reviews so that others can also be informed about what they are buying. A little of your time and a few brief words goes a long way! Would you please take 5 minutes of your time to share your experience with Product, so that we can improve and continue to serve you better :)</p>
+
+<h1>{{trans 'Order <span class="no-link">#%incrementId</span>' incrementId=$incrementId |raw}}</h1>
+<p>{{trans 'Placed on <span class="no-link">%created_at</span>' created_at=$date |raw}}</p>
+
+{{layout handle="review_reminder_template" reminder=$reminder area="frontend"}}
+
+<br>
+<p>Thank you again for helping us improve and sharing your review. We loved serving you. </p>
+
+{{template config_path="design/email/footer_template"}}

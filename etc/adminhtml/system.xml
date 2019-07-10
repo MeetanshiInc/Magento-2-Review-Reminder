@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <system>
+        <tab id="meetanshi" translate="label" sortOrder="100">
+            <label>
+                <![CDATA[<img src="https://meetanshi.com/media/logo.png" alt="Meetanshi" height="15" style="vertical-align:middle;"/>]]></label>
+        </tab>
+        <section id="admin_reviewreminderbasic" translate="label" type="text" sortOrder="23" showInDefault="1"
+                 showInWebsite="1" showInStore="1">
+            <label>Review Reminder</label>
+            <tab>meetanshi</tab>
+            <resource>Meetanshi_ReviewReminderBasic::reviewreminderbasic_configuration</resource>
+            <group id="config" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0"
+                   showInStore="0">
+                <label>Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0"
+                       showInStore="0">
+                    <label>Review Reminder</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="days" translate="label comment" type="text" sortOrder="10" showInDefault="1"
+                       showInWebsite="0" showInStore="0">
+                    <label>Send Email After X Days</label>
+                    <validate>validate-digits</validate>
+                    <comment><![CDATA[Enter "0" to send reminder Email as soon as the order is placed.]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="sender" translate="label comment" type="select" sortOrder="15" showInDefault="1"
+                       showInWebsite="0" showInStore="0">
+                    <label>Email Sender</label>
+                    <comment><![CDATA[]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>

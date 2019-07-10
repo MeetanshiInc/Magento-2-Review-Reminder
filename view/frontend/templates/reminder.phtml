@@ -1,0 +1,27 @@
+<?php
+?>
+<div>
+    <table summary="<?php echo __('Items Ordered') ?>" style="width: 100%">
+        <thead>
+        <tr>
+            <th><?php __('Product Image') ?></th>
+            <th><?php echo __('Name') ?></th>
+            <th><?php echo __('Review') ?></th>
+        </tr>
+        </thead>
+        <?php $products = $block->getReminderData($block->getReminder()); ?>
+        <?php foreach ($products as $product):?>
+            <?php $productUrlBind = '?order='.$block->getReminder()['increment_id'];
+            $productUrlBind = $product->getProductUrl().$productUrlBind; ?>
+            <tbody>
+            <tr>
+                <td>
+                    <img src='<?= $block->getProductImage($product) ?>' alt='<?php echo $product->getName();?>'>
+                </td>
+                <td><?php echo $product->getName() ?></td>
+                <td><a href="<?php echo $productUrlBind ?>" target="_blank"><?php echo __('Add Review Now');?></a></td>
+            </tr>
+            </tbody>
+        <?php endforeach; ?>
+    </table>
+</div>

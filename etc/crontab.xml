@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <group id="default">
+        <job instance="Meetanshi\ReviewReminderBasic\Cron\Reminder" method="execute" name="meetanshi_reviewreminder_basic_cron">
+            <schedule>0 4 * * *</schedule>
+        </job>
+    </group>
+</config>
