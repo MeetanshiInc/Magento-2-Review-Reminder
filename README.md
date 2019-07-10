@@ -2,7 +2,7 @@
 
 According to Bright Local, consumers read an average of seven reviews before trusting a business!
 
-Magento 2 store owners can collect maximum customer reviews to display it in the frontend. It helps gain customers' trust and increase sales. Everything with Meetanshi's [Magento 2 Review Reminder](https://meetanshi.com/magento-2-review-reminder.html) extension.
+Magento 2 store owners can collect maximum customer reviews to display it in the frontend. It helps gain customers' trust and increase sales. Everything with Meetanshi's [***Magento 2 Review Reminder***](https://meetanshi.com/magento-2-review-reminder.html) extension.
 
 The extension enables automated review reminder Email having the name and image of the item purchased. Also, a review submission link is placed for the ease of customers to submit a review. The Email is sent to the customers after the configured number of days of purchase from the backend.
 
