@@ -14,5 +14,7 @@ Magento 2 Review Reminder extension is what the Magento 2 stores need to collect
 * Option to select Email sender.
 * Improved conversion rate with maximum customer feedbacks for the store products.
 
-For more information, visit [https://meetanshi.com/magento-2-review-reminder.html](https://meetanshi.com/magento-2-review-reminder.html)
+For more information, visit ***[https://meetanshi.com/magento-2-review-reminder.html](https://meetanshi.com/magento-2-review-reminder.html)***
 
+Need help with installation and configuration? Refer to the User Guide:
+***[https://meetanshi.com/docs/magento-2/review-reminder-pro/](https://meetanshi.com/docs/magento-2/review-reminder-pro/)***
